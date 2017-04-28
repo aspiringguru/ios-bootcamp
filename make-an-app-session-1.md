@@ -156,7 +156,7 @@ Views have a frame and bounds. Both of these are CGRects. _Bounds_ are effected 
 
 Finish that line by referencing `view` (which we'll explain very soon):
 ```swift
-let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width, view.bounds.height))
+let label = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
 ```
 
 ## Windows
