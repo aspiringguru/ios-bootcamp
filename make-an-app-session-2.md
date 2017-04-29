@@ -19,7 +19,7 @@ The task is actually run by calling `.resume()`.
 
 Putting all this together, a networking call is relatively simple. A simple get for Google's homepage looks like this:
 ```swift
-let url = URL(string: "www.google.com") else { return nil }
+guard let url = URL(string: "www.google.com") else { return }
 let urlRequest = URLRequest(url: url)
 let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { data, urlResponse, error in
     // Data will be the google homepage html.
@@ -353,7 +353,7 @@ The image is nice, but we don't want to have to re-run the app to get a differen
 
 There's quite a lag time on the initial image load, so let's load the next image while the previous is still displaying.
 
-## 2.1.1 Loading an image in the background
+## 2.2.1 Loading an image in the background
 
 Once again Kingfisher helps with this. We can use the following to download an image while the current image is loading.
 ```swift
@@ -367,7 +367,7 @@ ImageDownloader.default.downloadImage(with: resourceUrl,
 
 We can just update the image on the `UIImageView` but that wouldn't look great. Let's learn how to animate the change.
 
-## 2.1.2 UIView Animations
+## 2.2.2 UIView Animations
 
 UIView comes out of the box with some pretty comprehensive support for animations. Heaps of a UIView's properties can be animated and animations can have different easings, be chained or reversed, right out of the box. A superview and subview can even have different animations running at the same time (eg: while one is spinning, the other is moving or fading with a different easing).
 

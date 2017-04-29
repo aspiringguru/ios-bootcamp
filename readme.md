@@ -39,3 +39,9 @@ Join our Slack channel and jump into **#cocoaheads** which is the name of the Br
 **Come along to the next CocoaHeads Brisbane Meetup is Tuesday 9 May 2017**
 
 RSVP via Meetup.com, free event including pizza and drinks; [https://www.meetup.com/en-AU/cocoaheads/events/238997201/](https://www.meetup.com/en-AU/cocoaheads/events/238997201/)
+
+## Special Thanks
+
+Ethan Jackwitz from Cocoaheads - help with content and networking special sauce, community support.
+
+Callum McColl from Griffith (Ph.D candidate and tutor) - functional programming talk.
