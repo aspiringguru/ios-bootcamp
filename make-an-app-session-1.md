@@ -298,7 +298,7 @@ class ViewController: UIViewController {
         view.addSubview(label)
 
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-            label.text = self?.dateFormatter.string(from: Date())
+            label.text = self.dateFormatter.string(from: Date())
         }
     }
 
