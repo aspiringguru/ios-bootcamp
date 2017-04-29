@@ -482,7 +482,7 @@ When we were creating our views programmatically, we had to rebuild to see our c
 
 > Whether splitting your view configuration between code and storyboards is a debate for another time. Also, interface builder often uses different names for variables / properties than the names in the documentation. Hooray!
 
-Let's style the labels we had before. Click the slider icon in the top half of the Utilities pane. This is how you can access the attributes for tweaking views. Style it to your hearts content.
+Let's style the labels we had before. Click the slider icon to open the **Attributes Inspector** in the top half of the **Utilities** pane. This is how you can access the attributes for tweaking views. Style it to your hearts content.
 
 > Fun fact, you can write custom views with the ability to render in interface builder! Custom views are a huge rabbit-hole so we won't cover them today. See https://developer.apple.com/library/content/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/ to get started. We won't cover custom drawing or `@IBDesignable` items either, but see our friend NSHipster for a good overview: http://nshipster.com/ibinspectable-ibdesignable/.
 
