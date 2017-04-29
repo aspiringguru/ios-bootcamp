@@ -57,6 +57,8 @@ Reuse identifiers allow the table view to maintain a pool of allocated views to 
 
 Since we're using a storyboard, we'll set the reuse identifier to 'List Cell' on the table view controller in the storyboard. This value has to match the value in the `tableView(_:cellForRowAt:)` implementation. We'll also set the type of the table view cell to 'Basic'. We'll develop a custom UITableViewCell subclass in 3.1.3.
 
+IMPORTANT: Turns out reuse cells can't have a space in them. Use 'ListCell' instead.
+
 ![Cell Setup](Screenshots/3-1-2-cell-setup.gif)
 
 Let's make our implementation of `tableView(_:cellForRowAt:)` as below for now.
