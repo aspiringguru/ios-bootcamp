@@ -19,7 +19,7 @@ The task is actually run by calling `.resume()`.
 
 Putting all this together, a networking call is relatively simple. A simple get for Google's homepage looks like this:
 ```swift
-let url = URL(string: "www.google.com") else { return nil }
+let url = guard URL(string: "www.google.com") else { return }
 let urlRequest = URLRequest(url: url)
 let task = URLSession.shared.dataTask(with: urlRequest, completionHandler: { data, urlResponse, error in
     // Data will be the google homepage html.
