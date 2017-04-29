@@ -86,7 +86,7 @@ Add a new file, this time a `UITableViewCell` subclass. We won't need either of 
 
 Select the cell with the reuse identifier we set before. Update its 'Custom Class' to match the `UITableViewCell` class you just created. Set the style of the cell (under the 'Attributes Inspector') to 'Custom'.
 
-Add an `@IBOutlet` for any view to be configured. GO to the Connections Inspector and drag between the outlet for connecting and the view to be connected to.
+Add an `@IBOutlet weak var label: UILabel!` for a label in the table view cell class then go to the Connections Inspector and drag between the outlet for connecting and the view to be connected to.
 
 ![Outlet Setup](Screenshots/3-1-2-outlet-setup.gif)
 
