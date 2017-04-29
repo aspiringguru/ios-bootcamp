@@ -6,7 +6,7 @@ In this final session, we're up to covering some concepts that are really import
 
 We'll aim at something like this:
 
-**Final app gif**
+![Height Setup](Screenshots/3-1-final-app.gif)
 
 Now, that's the _aim_. You may not get to adding circular images for the userProfile, or the number of likes for a user, but it's what we can do with the tools we've learned and a few hours.
 
@@ -30,11 +30,11 @@ First, head to `main.storyboard` and drag out a table view controller from the O
 
 Now we have a table view controller in the storyboard, we need to add a UITableViewController subclass to drive it. First, select `ViewController.swift`. Add a new file and select 'Cocoa Touch Class' from the wizard. We'll subclass UITableViewController and since we're using a storyboard, we don't need a xib (pronounced 'zib'). Selecting `ViewController.swift` is the easiest way to make sure the group and save location is set right. We need to do this because the default location of the file wouldn't be picked up by the compiler now that Cocoapods is in use.
 
-**Needs walkthrough**
+![Add file walkthrough](Screenshots/3-1-2-add-view-controller.gif)
 
 To wire the UITableViewController subclass to the table view controller in the storyboard, we need to set the 'Custom Class' attribute of the Table View Controller in the storyboard (under the Identity Inspector, next to the Attibute Inspector) to the name of the UITableViewController subclass.
 
-**Needs walkthrough**
+![Table View Setup](Screenshots/3-1-2-table-view-setup.gif)
 
 Table view controllers have a few required methods to display content on the screen.
 
@@ -57,7 +57,7 @@ Reuse identifiers allow the table view to maintain a pool of allocated views to 
 
 Since we're using a storyboard, we'll set the reuse identifier to 'List Cell' on the table view controller in the storyboard. This value has to match the value in the `tableView(_:cellForRowAt:)` implementation. We'll also set the type of the table view cell to 'Basic'. We'll develop a custom UITableViewCell subclass in 3.1.3.
 
-**Needs walkthrough**
+![Cell Setup](Screenshots/3-1-2-cell-setup.gif)
 
 Let's make our implementation of `tableView(_:cellForRowAt:)` as below for now.
 ```swift
@@ -84,11 +84,13 @@ Add a new file, this time a `UITableViewCell` subclass. We won't need either of 
 
 Select the cell with the reuse identifier we set before. Update its 'Custom Class' to match the `UITableViewCell` class you just created. Set the style of the cell (under the 'Attributes Inspector') to 'Custom'.
 
-UITableViewCells are `UIView` subclasses so a subclass view can be created in InterfaceBuilder with Autolayout. Table views only scroll vertically so cell heights aren't constrained, but their width is fixed to the width of the table view. Cell heights can be custom, but in this case it is easier to set a custom 'Row Height' in the Size Inspector. The example app had a fixed height of 150. Our cells will have fixed dimensions (similar to the view controller's view from before).
-
 Add an `@IBOutlet` for any view to be configured. GO to the Connections Inspector and drag between the outlet for connecting and the view to be connected to.
 
-**Needs Walkthrough**
+![Outlet Setup](Screenshots/3-1-2-outlet-setup.gif)
+
+UITableViewCells are `UIView` subclasses so a subclass view can be created in InterfaceBuilder with Autolayout. Table views only scroll vertically so cell heights aren't constrained, but their width is fixed to the width of the table view. Cell heights can be custom, but in this case it is easier to set a custom 'Row Height' in the Size Inspector. The example app had a fixed height of 150. Our cells will have fixed dimensions (similar to the view controller's view from before).
+
+![Height Setup](Screenshots/3-1-2-height-setup.gif)
 
 Then in the cell for item at index path, cast the `UITableViewCell` returned by `tableView.dequeueReusableCell(withIdentifier:for:)` to your `UITableViewCell` subclass. Use a force cast for this. The string reuse identifier is way more dangerous than the type mismatch.
 

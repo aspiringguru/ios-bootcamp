@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         print("World")
         
+        dateFormatter.locale = Locale(identifier: "")
+        
         timeFormatter.timeStyle = .medium
         dateFormatter.dateStyle = .full
         

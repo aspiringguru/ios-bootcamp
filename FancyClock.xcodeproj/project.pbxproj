@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D24F38E1EA9EEA400EB478F /* FancyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FancyClock.app; path = "/Users/javan/Desktop/FancyClock/build/Debug-iphoneos/FancyClock.app"; sourceTree = "<absolute>"; };
+		8D0678721EB4585E0014CFF9 /* FancyClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = FancyClock.app; path = "/Users/javan/Desktop/FancyClock/build/Debug-iphoneos/FancyClock.app"; sourceTree = "<absolute>"; };
 		8D24F3911EA9EEA400EB478F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D24F3931EA9EEA400EB478F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D24F3961EA9EEA400EB478F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,9 +62,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D24F3A01EA9EEA400EB478F /* Build configuration list for PBXNativeTarget "FancyClock" */;
 			buildPhases = (
+				73D844947F859EF2BCC395D9 /* [CP] Check Pods Manifest.lock */,
 				8D24F38A1EA9EEA400EB478F /* Sources */,
 				8D24F38B1EA9EEA400EB478F /* Frameworks */,
 				8D24F38C1EA9EEA400EB478F /* Resources */,
+				FE70C0005ADDFFF2D0F912C3 /* [CP] Embed Pods Frameworks */,
+				624A8B1702A75E69AD6B5805 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -72,7 +75,7 @@
 			);
 			name = FancyClock;
 			productName = FancyClock;
-			productReference = 8D24F38E1EA9EEA400EB478F /* FancyClock.app */;
+			productReference = 8D0678721EB4585E0014CFF9 /* FancyClock.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -122,6 +125,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		624A8B1702A75E69AD6B5805 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FancyClock/Pods-FancyClock-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73D844947F859EF2BCC395D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE70C0005ADDFFF2D0F912C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FancyClock/Pods-FancyClock-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D24F38A1EA9EEA400EB478F /* Sources */ = {
